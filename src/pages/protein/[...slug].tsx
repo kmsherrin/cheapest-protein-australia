@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-no-target-blank */
 import { Flex, Text, Heading, Box, Stack } from "@chakra-ui/react";
 import { createColumnHelper } from "@tanstack/react-table";
+import { NextSeo } from "next-seo";
 import { PageNotFoundError } from "next/dist/shared/lib/utils";
 import Head from "next/head";
 import Image from "next/image";
@@ -117,11 +118,20 @@ export default function Page({ page }: { page: IPage }) {
     sortBy: [{ id: "proteinValue", desc: true }],
   };
 
+  if (!page) {
+    // fix Next bug while building
+    // "Error occurred prerendering page "/[...slug]". Read more: https://err.sh/next.js/prerender-error"
+    // https://github.com/vercel/next.js/issues/12846
+    return null;
+  }
+
   return (
     <>
-      <Head>
+      <NextSeo title={`Cheap ${page.title}`} />
+
+      {/* <Head>
         <title>{page.title}</title>
-      </Head>
+      </Head> */}
 
       <Flex
         direction="column"
@@ -279,7 +289,7 @@ export async function getStaticProps({ params }) {
 
   if (response.ok) {
     const productData = await response.json();
-    console.log(productData);
+    // console.log(productData);
 
     page.products.forEach((product, index) => {
       page.products.data = [];

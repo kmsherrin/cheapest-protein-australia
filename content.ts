@@ -44,7 +44,7 @@ const content = {
           link: "https://www.aminoz.com.au/amino-z-whey-protein-isolate-wpi.html",
           image:
             "https://www.aminoz.com.au/media/catalog/product/cache/1/thumbnail/460x440/9df78eab33525d08d6e5fb8d27136e95/w/p/wpi_choc_orange.jpg",
-          shipsFrom: "Hobart",
+          shipsFrom: "Sydney",
           packageSize: 1,
           nutritional: {
             protein: 79.7,
@@ -455,16 +455,16 @@ const content = {
         },
       ],
     },
-    {
-      title: "Mass Gainer",
-      description:
-        "Mass Gainer is a high protein, high carbohydrate supplement designed to help you gain weight and muscle mass. It is usually consumed by people who have a hard time gaining weight and muscle mass.",
-      subdescription:
-        "Yeah, yeah I'm getting there. Wanting to add mass gainers to the site... Any suggestions drop me a line.",
-      path: "/mass-gainer",
-      content: "<p><strong>Bar</strong> content...</p>",
-      products: [],
-    },
+    // {
+    //   title: "Mass Gainer",
+    //   description:
+    //     "Mass Gainer is a high protein, high carbohydrate supplement designed to help you gain weight and muscle mass. It is usually consumed by people who have a hard time gaining weight and muscle mass.",
+    //   subdescription:
+    //     "Yeah, yeah I'm getting there. Wanting to add mass gainers to the site... Any suggestions drop me a line.",
+    //   path: "/mass-gainer",
+    //   content: "<p><strong>Bar</strong> content...</p>",
+    //   products: [],
+    // },
   ],
 };
 
