@@ -50,7 +50,7 @@ const priceCell = (tableData) => {
     if (d) {
       const price = d.find((obj) => obj.id === "Price");
 
-      return price.text_data.replace(/[^\d.-]/g, "");
+      return Number(price.text_data.replace(/[^\d.-]/g, ""));
     }
   }
   return "No price";
@@ -65,22 +65,57 @@ const proteinValueCell = (tableData) => {
     if (d) {
       // get array element where the obj contains id equal to Price
       const price = d.find((obj) => obj.id === "Price");
-      console.log(price);
       const number_data = price.text_data.replace(/[^\d.-]/g, "");
 
       if (number_data) {
         return (
-          tableData.row.original.nutritional.protein /
-          (number_data / tableData.row.original.packageSize)
-        ).toFixed(2);
+          <b>
+            {Number(
+              (
+                tableData.row.original.nutritional.protein /
+                (number_data / tableData.row.original.packageSize)
+              ).toFixed(2)
+            )}
+          </b>
+        );
       }
     }
     return "";
   }
 };
 
+function proteinValueAccessor(row: any) {
+  const d = JSON.parse(row.data[row.data.length - 1].textData);
+  if (d) {
+    // get array element where the obj contains id equal to Price
+    const price = d.find((obj) => obj.id === "Price");
+    const number_data = price.text_data.replace(/[^\d.-]/g, "");
+
+    if (number_data) {
+      return Number(
+        (row.nutritional.protein / (number_data / row.packageSize)).toFixed(2)
+      );
+    }
+  }
+  return 0;
+}
+
+function proteinPriceAccessor(row: any) {
+  const d = JSON.parse(row.data[row.data.length - 1].textData);
+  if (d) {
+    // get array element where the obj contains id equal to Price
+    const price = d.find((obj) => obj.id === "Price");
+    return Number(price.text_data.replace(/[^\d.-]/g, ""));
+  }
+  return 0;
+}
+
 export default function Page({ page }: { page: IPage }) {
   const columnHelper = createColumnHelper();
+
+  const initialState = {
+    sortBy: [{ id: "proteinValue", desc: true }],
+  };
 
   return (
     <>
@@ -113,7 +148,14 @@ export default function Page({ page }: { page: IPage }) {
         </Stack>
         <Stack my={10} style={{ overflowX: "auto" }}>
           <DataTable
+            initialState={initialState}
             data={page.products}
+            defaultSorted={[
+              {
+                id: "proteinValue",
+                desc: true,
+              },
+            ]}
             columns={[
               columnHelper.accessor("image", {
                 cell: (tableProps) => (
@@ -139,15 +181,17 @@ export default function Page({ page }: { page: IPage }) {
                 ),
                 header: "Product",
               }),
-              columnHelper.accessor("cname", {
+
+              columnHelper.accessor(proteinValueAccessor, {
+                id: "proteinValue",
                 cell: (tableProps) => proteinValueCell(tableProps),
-                header: "Protein Value (g per $)",
+                header: "Protein per $ (g per $)",
                 meta: {
                   isNumeric: true,
                 },
               }),
 
-              columnHelper.accessor("name", {
+              columnHelper.accessor(proteinPriceAccessor, {
                 cell: (tableProps) => priceCell(tableProps),
                 header: "Price",
               }),

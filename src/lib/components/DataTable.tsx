@@ -9,7 +9,7 @@ import {
   createColumnHelper,
 } from "@tanstack/react-table";
 import * as React from "react";
-import { VscTriangleUp, VscTriangleDown } from "react-icons";
+import { VscTriangleUp, VscTriangleDown } from "react-icons/vsc";
 
 export type DataTableProps<Data extends object> = {
   data: Data[];
@@ -19,6 +19,8 @@ export type DataTableProps<Data extends object> = {
 export function DataTable<Data extends object>({
   data,
   columns,
+  // eslint-disable-next-line react/prop-types
+  initialState,
 }: DataTableProps<Data>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const table = useReactTable({
@@ -27,6 +29,7 @@ export function DataTable<Data extends object>({
     getCoreRowModel: getCoreRowModel(),
     onSortingChange: setSorting,
     getSortedRowModel: getSortedRowModel(),
+    initialState,
     state: {
       sorting,
     },
@@ -54,9 +57,9 @@ export function DataTable<Data extends object>({
                   <chakra.span pl="4">
                     {header.column.getIsSorted() ? (
                       header.column.getIsSorted() === "desc" ? (
-                        <VscTriangleUp aria-label="sorted descending" />
+                        <VscTriangleDown aria-label="sorted descending" />
                       ) : (
-                        <VscTriangleDown aria-label="sorted ascending" />
+                        <VscTriangleUp aria-label="sorted ascending" />
                       )
                     ) : null}
                   </chakra.span>
