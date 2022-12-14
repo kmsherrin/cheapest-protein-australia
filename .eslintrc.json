@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "sznm/react",
+    "plugin:react/jsx-runtime",
+    "plugin:@next/next/recommended",
+    "prettier"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto",
+        "importOrder": ["^components/(.*)$", "^[./]"],
+        "importOrderSeparation": true,
+        "importOrderSortSpecifiers": true
+      }
+    ]
+  }
+}

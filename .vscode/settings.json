@@ -1,0 +1,12 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+
+// change vscode header color
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#dad9de",
+    "titleBar.activeForeground": "#254464",
+    "titleBar.inactiveBackground": "#ffffff",
+    "titleBar.inactiveForeground": "#ffffff"
+  }
+}
