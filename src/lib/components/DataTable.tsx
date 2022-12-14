@@ -9,7 +9,7 @@ import {
   createColumnHelper,
 } from "@tanstack/react-table";
 import * as React from "react";
-import { VscTriangleUpIcon, VscTriangleDownIcon } from "react-icons";
+import { VscTriangleUp, VscTriangleDown } from "react-icons";
 
 export type DataTableProps<Data extends object> = {
   data: Data[];
@@ -54,9 +54,9 @@ export function DataTable<Data extends object>({
                   <chakra.span pl="4">
                     {header.column.getIsSorted() ? (
                       header.column.getIsSorted() === "desc" ? (
-                        <VscTriangleUpIcon aria-label="sorted descending" />
+                        <VscTriangleUp aria-label="sorted descending" />
                       ) : (
-                        <VscTriangleDownIcon aria-label="sorted ascending" />
+                        <VscTriangleDown aria-label="sorted ascending" />
                       )
                     ) : null}
                   </chakra.span>

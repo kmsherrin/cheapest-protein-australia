@@ -1,10 +1,10 @@
 {
-  "short_name": "nextarter-chakra",
+  "short_name": "",
   "name": "Next.js App Template",
   "lang": "en",
   "start_url": "/",
-  "background_color": "#FFFFFF",
-  "theme_color": "#FFFFFF",
+  "background_color": "#b2b2b2",
+  "theme_color": "#4299e1",
   "dir": "ltr",
   "display": "standalone",
   "orientation": "portrait",
