@@ -23,6 +23,7 @@ const ContactPage = () => {
       gap={28}
       pt={{ base: 16, md: 30 }}
       w="full"
+      minHeight={{ base: "80vh", md: "88vh" }}
     >
       <Stack as={Box} maxWidth="3xl" textAlign="center" mx="auto" style={{}}>
         <Heading

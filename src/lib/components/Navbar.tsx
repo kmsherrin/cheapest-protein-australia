@@ -48,6 +48,12 @@ export default function Nav() {
 
         <Flex alignItems="center">
           <Stack direction="row" spacing={7}>
+            <Link href="/blog">
+              <Button variant="outline">Home</Button>
+            </Link>
+            <Link href="/blog">
+              <Button variant="outline">Blog</Button>
+            </Link>
             <Button onClick={toggleColorMode}>
               {colorMode === "light" ? <RiMoonFill /> : <RiSunLine />}
             </Button>

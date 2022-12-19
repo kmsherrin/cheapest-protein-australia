@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <Flex as="footer" width="full" justifyContent="center" mt="auto">
       <Text fontSize="sm" color="gray.500">
-        {new Date().getFullYear()} - made with ☕ by ken
+        {new Date().getFullYear()} - made with ☕ by k
       </Text>
     </Flex>
   );

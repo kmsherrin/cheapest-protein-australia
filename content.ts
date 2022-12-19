@@ -6,7 +6,8 @@ const content = {
       WPI is the high quality protein, which is typically around 90% protein by weight. 
       It is the purest form of whey protein that currently exists. 
       WPI is more expensive than other proteins or blends of proteins, however if you need pure protein, it is the way to go.`,
-      subdescription: `Prices are updated daily`,
+      subdescription: `Find the best protein at the cheapest prices! The prices shown are updated daily`,
+      metaDescription: `Find the best protein powder. Many brands of Whey Protein Isolate (WPI) are collated to compare, find the cheapest protein powder`,
       path: "/wpi",
       content:
         "<p>Foo content...</p><h2>Heading</h2><p>Some other content...</p>",
@@ -231,7 +232,8 @@ const content = {
       title: "Whey Protein Concentrate",
       description:
         "WPC is a less processed form of whey protein and contains less protein by weight than WPI. It is the most common and affordable form of whey protein.",
-      subdescription: `Prices are updated daily`,
+      subdescription: `Find the best protein at the cheapest prices! The prices shown are updated daily`,
+      metaDescription: `Find the best protein powder. Many brands of Whey Protein Concentrate (WPC) are collated to compare, find the cheapest protein powder`,
       path: "/wpc",
       content: "<p><strong>Bar</strong> content...</p>",
       products: [

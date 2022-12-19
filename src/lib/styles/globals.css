@@ -1,1 +1,145 @@
 /* Global Styling here */
+
+.markdown {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.markdown > h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.markdown > h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.markdown > h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.markdown > h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.markdown > h5 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.markdown > h6 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.markdown > p {
+  text-align: justify;
+
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.markdown > ul {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 90%;
+  margin-left: auto;
+  text-align: left;
+}
+
+.markdown > ol {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.markdown > li {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.markdown > li::marker {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  content: "➡";
+}
+
+.markdown > a {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #0070f3;
+}
+
+.markdown > blockquote {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.markdown > pre {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.markdown > code {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.markdown > p > img {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.markdown > table {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  width: 100%;
+  border: 1px solid hsl(0, 0%, 50%, 0.5);
+  border-radius: 20px;
+}
+
+.markdown > table > thead > tr > th {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.6;
+  border: 1px solid hsl(0, 0%, 50%, 0.5);
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.markdown > table > tbody > tr > td {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  border-radius: 10px;
+  padding: 4px 2px;
+}

@@ -36,6 +36,7 @@ interface IPage {
   title: string;
   description: string;
   subdescription: string;
+  metaDescription: string;
   keywords: string;
   slug: string;
   content: string;
@@ -127,7 +128,10 @@ export default function Page({ page }: { page: IPage }) {
 
   return (
     <>
-      <NextSeo title={`Cheap ${page.title}`} />
+      <NextSeo
+        title={`Cheap ${page.title}`}
+        description={page.metaDescription}
+      />
 
       {/* <Head>
         <title>{page.title}</title>
