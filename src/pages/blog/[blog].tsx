@@ -84,11 +84,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  console.log(params);
   const blogData = await getBlogData(params.blog);
   return {
     props: {
       blogData,
     },
+    revalidate: 86400, // In seconds
   };
 }

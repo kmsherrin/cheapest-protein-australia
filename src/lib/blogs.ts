@@ -9,7 +9,9 @@ const blogsDirectory = path.join(process.cwd(), "blogs");
 
 export function getAllBlogs() {
   const fileNames = fs.readdirSync(blogsDirectory);
-  return fileNames.map((fileName) => {
+  const mdFileNames = fileNames.filter((fileName) => fileName.endsWith(".md"));
+
+  return mdFileNames.map((fileName) => {
     return {
       params: {
         blog: fileName.replace(/\.md$/, ""),
