@@ -37,7 +37,7 @@ export default function BlogPost({ blogData }: { blogData: BlogData }) {
       >
         <Flex
           direction="column"
-          maxWidth="5xl"
+          maxWidth={{ base: "95%", md: "5xl" }}
           textAlign="center"
           justifyContent="center"
           mx="auto"
@@ -55,11 +55,13 @@ export default function BlogPost({ blogData }: { blogData: BlogData }) {
           <Text fontWeight="400" fontSize="lg">
             {blogData.blurb}
           </Text>
-          <img
-            style={{ maxWidth: "600px", margin: "auto" }}
-            src={blogData.coverImage}
-            alt=""
-          />
+          <div className="">
+            <img
+              style={{ maxWidth: "min(85vw, 600px)", margin: "auto" }}
+              src={blogData.coverImage}
+              alt=""
+            />
+          </div>
 
           <br />
           <hr />

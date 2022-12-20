@@ -14,7 +14,7 @@ const Home = () => {
       mb={8}
       w="full"
     >
-      <NextSeo title="Home" />
+      <NextSeo title="Finder Home" />
       <CTASection />
     </Flex>
   );

@@ -1,7 +1,7 @@
 /** @type {import('next-seo').DefaultSeoProps} */
 const defaultSEOConfig = {
   title: "Cheapest Protein Finder Australia",
-  titleTemplate: "Cheap Protein | %s",
+  titleTemplate: "Cheap Protein Finder | %s",
   defaultTitle: "Cheapest Protein Australia",
   description: "Find cheap protein from the best brands in Australia",
   canonical: "https://www.cheapest-protein-australia.app",

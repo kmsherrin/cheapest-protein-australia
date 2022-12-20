@@ -48,7 +48,7 @@ export default function Nav() {
 
         <Flex alignItems="center">
           <Stack direction="row" spacing={7}>
-            <Link href="/blog">
+            <Link href="/" display={{ base: "none", md: "block" }}>
               <Button variant="outline">Home</Button>
             </Link>
             <Link href="/blog">

@@ -25,6 +25,7 @@ const ContactPage = ({ allBlogData }) => {
       spacing={{ base: 8, md: 14 }}
       gap={28}
       pt={{ base: 16, md: 30 }}
+      px={2}
       w="full"
       minHeight={{ base: "80vh", md: "88vh" }}
     >
@@ -46,18 +47,19 @@ const ContactPage = ({ allBlogData }) => {
                 display: "grid",
                 gridTemplateColumns: "1.2fr 2fr",
                 gap: "16px",
-                maxHeight: "220px",
+                maxHeight: "320px",
                 border: "1px solid rgb(65, 72, 85, 0.5)",
                 borderRadius: "5px",
                 padding: "6px",
               }}
             >
-              <div>
+              <div style={{ display: "grid", placeItems: "center" }}>
                 <img
                   style={{
                     maxHeight: "100%",
                     maxWidth: "100%",
                     borderRadius: "5px",
+                    margin: "auto",
                   }}
                   src={`${coverImage}`}
                   alt={title}

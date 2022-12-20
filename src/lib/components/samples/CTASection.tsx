@@ -26,7 +26,7 @@ const CTASection = () => {
       pt={{ base: 20, md: 36 }}
       w="full"
     >
-      <Stack as={Box} maxWidth="3xl" textAlign="center" mx="auto">
+      <Stack as={Box} maxWidth="3xl" textAlign="center" mx="auto" px={6}>
         <Heading
           fontWeight={600}
           fontSize={{ base: "4xl", sm: "4xl", md: "6xl" }}
@@ -34,7 +34,7 @@ const CTASection = () => {
         >
           In Australia? Find the <br />
           <Text as="span" color="blue.400">
-            cheapest protein
+            cheapest whey protein
           </Text>
         </Heading>
         <Text color={useColorModeValue("gray.500", "gray.200")} pt={6}>
