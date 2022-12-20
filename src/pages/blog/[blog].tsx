@@ -23,7 +23,7 @@ export default function BlogPost({ blogData }: { blogData: BlogData }) {
 
   return (
     <>
-      <NextSeo title={`${blogData.title}`} />
+      <NextSeo title={`${blogData.title}`} description={blogData.blurb} />
 
       <Flex
         direction="column"
